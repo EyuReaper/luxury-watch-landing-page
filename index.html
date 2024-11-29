@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Watches</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Toggle for Dark/Light Mode -->
+  <div class="theme-toggle">
+    <input type="checkbox" id="themeSwitch">
+    <label for="themeSwitch" id="themeLabel">🌙</label>
+  </div>
+
+  <!-- Language Toggle -->
+  <div class="language-toggle">
+    <select id="langSwitch">
+      <option value="en">English</option>
+      <option value="am">አማርኛ</option>
+      <option value="ar">العربية</option>
+    </select>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Luxury Timepieces</h1>
+    <p>Timeless Elegance for Every Moment</p>
+    <div class="watch">
+      <div class="dial">
+        <div class="hand hour"></div>
+        <div class="hand minute"></div>
+        <div class="hand second"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Gallery Section -->
+  <section class="gallery">
+    <h2>Our Collection</h2>
+    <div class="grid">
+      <div class="watch-item">
+        <img src="image/clock-3179167_1280.jpg" alt="Watch 1" data-brand="Brand A" data-origin="Switzerland" data-price="$2000" data-rating="4.5">
+        <div class="info-panel" data-en="Brand: Brand A<br>Made in: Switzerland<br>Price: $2000<br>Rating: ★★★★☆"
+                     data-am="ሞዴል: ሞዴል አ<br>ስሪት: ስዊዘርላንድ<br>ዋጋ: ብር 2000<br>ደረጃ: ★★★★☆"
+                     data-ar="العلامة التجارية: العلامة التجارية أ<br>صنع في: سويسرا<br>السعر: 2000 دولار<br>التقييم: ★★★★☆">
+          Brand: Brand A<br>
+          Made in: Switzerland<br>
+          Price: $2000<br>
+          Rating: <span class="rating">★★★★☆</span>
+        </div>
+      </div>
+      <div class="watch-item">
+        <img src="image/panerai-watch-1362344_1280.jpg" alt="Watch 2" data-brand="Brand B" data-origin="Italy" data-price="$3000" data-rating="4.8">
+        <div class="info-panel" data-en="Brand: Brand B<br>Made in: Italy<br>Price: $3000<br>Rating: ★★★★★"
+                     data-am="ሞዴል: ሞዴል ቢ<br>ስሪት: ጣልያን<br>ዋጋ: ብር 3000<br>ደረጃ: ★★★★★"
+                     data-ar="العلامة التجارية: العلامة التجارية ب<br>صنع في: إيطاليا<br>السعر: 3000 دولار<br>التقييم: ★★★★★">
+          Brand: Brand B<br>
+          Made in: Italy<br>
+          Price: $3000<br>
+          Rating: <span class="rating">★★★★★</span>
+        </div>
+      </div>
+      <div class="watch-item">
+        <img src="image/wrist-watch-7957073_1280.jpg" alt="Watch 3" data-brand="Brand C" data-origin="Germany" data-price="$1500" data-rating="4.2">
+        <div class="info-panel" data-en="Brand: Brand C<br>Made in: Germany<br>Price: $1500<br>Rating: ★★★★☆"
+                     data-am="ሞዴል: ሞዴል ሲ<br>ስሪት: ጀርመን<br>ዋጋ: ብር 1500<br>ደረጃ: ★★★★☆"
+                     data-ar="العلامة التجارية: العلامة التجارية ج<br>صنع في: ألمانيا<br>السعر: 1500 دولار<br>التقييم: ★★★★☆">
+          Brand: Brand C<br>
+          Made in: Germany<br>
+          Price: $1500<br>
+          Rating: <span class="rating">★★★★☆</span>
+        </div>
+      </div>
+      <div class="watch-item">
+        <img src="image/casio-8392121_1280.jpg" alt="Watch 4" data-brand="Brand D" data-origin="Japan" data-price="$100" data-rating="4.0">
+        <div class="info-panel" data-en="Brand: Brand D<br>Made in: Japan<br>Price: $100<br>Rating: ★★★★☆"
+                     data-am="ሞዴል: ሞዴል ዲ<br>ስሪት: ጃፓን<br>ዋጋ: ብር 100<br>ደረጃ: ★★★★☆"
+                     data-ar="العلامة التجارية: العلامة التجارية د<br>صنع في: اليابان<br>السعر: 100 دولار<br>التقييم: ★★★★☆">
+          Brand: Brand D<br>
+          Made in: Japan<br>
+          Price: $100<br>
+          Rating: <span class="rating">★★★★☆</span>
+        </div>
+      </div>
+      <div class="watch-item">
+        <img src="image/wristwatch-407096_1280.jpg" alt="Watch 5" data-brand="Brand E" data-origin="USA" data-price="$1200" data-rating="4.7">
+        <div class="info-panel" data-en="Brand: Brand E<br>Made in: USA<br>Price: $1200<br>Rating: ★★★★★"
+                     data-am="ሞዴል: ሞዴል ኢ<br>ስሪት: አሜሪካ<br>ዋጋ: ብር 1200<br>ደረጃ: ★★★★★"
+                     data-ar="العلامة التجارية: العلامة التجارية هـ<br>صنع في: الولايات المتحدة<br>السعر: 1200 دولار<br>التقييم: ★★★★★">
+          Brand: Brand E<br>
+          Made in: USA<br>
+          Price: $1200<br>
+          Rating: <span class="rating">★★★★★</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax Scrolling Sections -->
+  <section class="parallax" style="background-image: url('image/watchmaker-8735031_1280.jpg');">
+    <div class="parallax-content">
+      <h2>Crafted to Perfection</h2>
+      <p>Experience the artistry of fine watchmaking.</p>
+    </div>
+  </section>
+  
+  <section class="parallax" style="background-image: url('image/elegance in detail.jpg');">
+    <div class="parallax-content">
+      <h2>Elegance in Every Detail</h2>
+      <p>Luxury is not just a choice, it's a lifestyle.</p>
+    </div>
+  </section>
+
+  <section class="parallax" style="background-image: url('image/timeless2.jpg');">
+    <div class="parallax-content">
+      <h2>Timeless Design</h2>
+      <p>Watches that transcend trends and time.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Luxury Watches. All rights reserved.</p>
+  </footer>
+</body>
+</html>

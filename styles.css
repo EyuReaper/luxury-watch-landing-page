@@ -1,0 +1,211 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom Properties for Themes */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #d4af37;
+  --info-panel-bg: rgba(255, 255, 255, 0.9); /* Light theme info panel background */
+  --info-panel-border: #ccc; /* Light theme border color */
+  --parallax-content-bg: rgba(255, 255, 255, 0.7); /* Light overlay for parallax content */
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --accent-color: #ffdd00;
+  --info-panel-bg: rgba(30, 30, 30, 0.9); /* Dark theme info panel background */
+  --info-panel-border: #444; /* Dark theme border color */
+  --parallax-content-bg: rgba(0, 0, 0, 0.7); /* Dark overlay for parallax content */
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom, var(--accent-color), var(--bg-color));
+}
+
+/* Watch Styles */
+.hero .watch {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 2rem auto;
+  border: 5px solid var(--accent-color);
+  border-radius: 50%;
+}
+
+.dial {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hand {
+  position: absolute;
+  width: 2px;
+  background: var(--text-color);
+  transform-origin: bottom center;
+  left: 50%;
+  bottom: 50%;
+}
+
+.hand.hour {
+  height: 50px;
+  animation: rotate-hour 12h linear infinite;
+}
+
+.hand.minute {
+  height: 70px;
+  animation: rotate-minute 1h linear infinite;
+}
+
+.hand.second {
+  height: 90px;
+  background: var(--accent-color);
+  animation: rotate-second 60s linear infinite;
+}
+
+@keyframes rotate-hour, rotate-minute, rotate-second {
+  to { transform: rotate(360deg); }
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 2rem;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  position: relative; /* Positioning for info panel */
+}
+
+.grid img {
+  width: 100%;
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+}
+
+/* Info Panel */
+.info-panel {
+  display: none; /* Hidden by default */
+  background: var(--info-panel-bg);
+  padding: 15px;
+  border: 1px solid var(--info-panel-border);
+  border-radius: 8px;
+  position: absolute;
+  z-index: 10;
+  width: 220px; /* Adjust width as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+/* Make the info panel visible */
+.info-panel.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Star Rating */
+.rating {
+  font-size: 1.2rem; /* Adjust size as needed */
+  color: gold; /* Color for stars */
+}
+
+/* Adjust positioning for the info panel */
+.watch-item {
+  position: relative; /* Positioning context for the info panel */
+}
+
+/* Parallax Section */
+.parallax {
+  position: relative;
+  height: 400px; /* Height of the parallax section */
+  overflow: hidden; /* Hides any overflow */
+  background: center / cover fixed; /* Background image */
+  color: var(--bg-color);
+  display: flex; /* Center content */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+}
+
+.parallax-content {
+  position: relative; /* Positioning for content */
+  padding: 20px;
+  background: var(--parallax-content-bg); /* Consistent overlay for both themes */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center; /* Center text */
+  color: var(--text-color); /* Text color */
+  max-width: 600px; /* Limit content width */
+}
+
+.parallax h2 {
+  font-size: 2.5rem; /* Adjust font size */
+  margin-bottom: 1rem; /* Space below heading */
+}
+
+.parallax p {
+  font-size: 1.2rem; /* Adjust font size */
+}
+
+/* Dark/Light Mode Toggle */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle input {
+  display: none;
+}
+
+.theme-toggle label {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.language-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000; /* Ensure it is above other content */
+}
+
+.language-toggle select {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--accent-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--accent-color);
+  color: var(--text-color);
+}
