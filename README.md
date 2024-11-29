@@ -2,6 +2,8 @@
 
 A visually striking product landing page that showcases luxury timepieces with smooth parallax scrolling and interactive elements. This project highlights modern web design techniques to create an engaging user experience.
 
+# Preview
+
 ![Preview Screenshot 1](image/screencapture english-127-0-0-1-5500-index-html-2024-11-30-01_36_24.png).
 ![Preview Screenshot 2](image/screencapture በአማርኛ-127-0-0-1-5500-index-html-2024-11-30-01_34_40.png).
 ![Preview Screenshot 3](image/screencapture arabic-127-0-0-1-5500-index-html-2024-11-30-01_37_23.png).
